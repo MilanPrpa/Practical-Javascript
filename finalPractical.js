@@ -10,13 +10,15 @@ addTodo: function(todoText) {
  		todoText: todoText,
  		completed: false
  	});
- 	
- },
+
+ },	
+ 
  changeTodo: function(position, todoText) {
  	this.todos[position].todoText = todoText;
  	
  },
  deleteTodo: function(position) {
+ 	
  	this.todos.splice(position, 1);
  	
  },
@@ -52,6 +54,7 @@ addTodo: function(todoText) {
 
 var handlers = {
 	addTodo: function() {
+		
 		var addButtonText = document.getElementById('addButtonText');
 		todoList.addTodo(addButtonText.value);
 		addButtonText.value = '';
@@ -79,6 +82,7 @@ var handlers = {
 		view.displayTodos();
 	},
 	toggleAll: function() {
+		
 		todoList.toggleAll();
 		view.displayTodos();
 	},
